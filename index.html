@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words that describes Lang</title>
+</head>
+
+<style>
+    ::selection {
+        background: rgba(249, 245, 75, 0.2);
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        min-height: 100vh;
+        width: 100vw;
+        font-family: "FARCRY", Verdana, Tahoma;
+    }
+
+    p {
+        font-size: 8pt;
+        letter-spacing: 3px;
+        line-height: 10pt;
+        text-align: justify;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background: url(/lannga.jpg) no-repeat center/cover;
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgb(225, 225, 255, 0);
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+    }
+
+    #play {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+    }
+
+    /* #openVideoBtn {
+        position: absolute;
+        top: 90%;
+        left: 40%;
+    }
+
+    #openVideoBtn:hover {
+        background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+        background-color: #ffab23;
+    }
+
+    #openVideoBtn:active {
+        position: relative;
+        top: 1px;
+    } */
+
+
+    .container {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .right {
+        float: left;
+        color: #FFF;
+        width: 50%;
+        text-align: right;
+    }
+
+    .left {
+        float: left;
+        color: #7a7a7a;
+        width: 50%;
+        text-align: right;
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+        margin-top: 40px;
+    }
+
+    h1,
+    h4 {
+        -webkit-transition: opacity .25s;
+        -moz-transition: opacity .25s;
+        -o-transition: opacity .25s;
+        -ms-transition: opacity .25s;
+        transition: opacity .25s;
+        font-family: "FARCRY", Verdana, Tahoma;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    h4:first-child {
+        margin-bottom: -2vw;
+    }
+
+    h4:last-child {
+        margin-top: -1.7vw;
+    }
+
+    @media screen and (max-width: 700px) {
+        .p {
+            background: url(/lannga_cp.jpg) no-repeat center/cover;
+        }
+
+        span {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            min-height: 100vh;
+            width: 100vw;
+            font-family: "FARCRY", Verdana, Tahoma;
+        }
+
+        #play {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            margin-bottom: 0px;
+        }
+    }
+
+    /* #videoPopup {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #videoContainer {
+        width: 80%;
+        height: 80%;
+    }
+
+    #videoPlayer {
+        width: 100%;
+        height: 100%;
+    }
+
+    #closeVideoBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    } */
+</style>
+
+<body>
+    <div class="container">
+        <div class="right">
+            <h4 class="randoms"></h4>
+            <h1 class="randoms"></h1>
+            <h4 class="randoms"></h4>
+        </div>
+        <div class="left">
+            <h4 class="randoms"></h4>
+            <h1 class="randoms"></h1>
+            <h4 class="randoms"></h4>
+        </div>
+    </div>
+
+    <!-- <button id="openVideoBtn">Surprize hehe</button>
+    <div id="videoPopup">
+        <div id="videoContainer">
+            <video id="videoPlayer" controls>
+                <source src="/me.mp4" type="video/mp4">
+            </video>
+        </div>
+        <button id="closeVideoBtn">Close</button>
+    </div> -->
+
+    <p>
+        Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin Labis
+        ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na kailangan
+        pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't
+        maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din 'Di ko
+        alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog ka
+        sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+        iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig Ikaw
+        lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal Malay ko
+        bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na kailangan
+        pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't
+        maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+        la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la La-la-la-la
+        (ah) La-la-la-la (ah) Sinta
+        Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin Labis
+        ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na kailangan
+        pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't
+        maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din 'Di ko
+        alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog ka
+        sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+        iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig Ikaw
+        lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal Malay ko
+        bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na kailangan
+        pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't
+        maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+        la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la La-la-la-la
+        (ah) La-la-la-la (ah) Sinta
+        Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin Labis
+        ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na kailangan
+        pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't
+        maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din 'Di ko
+        alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog ka
+        sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+        iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig Ikaw
+        lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal Malay ko
+        bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na kailangan
+        pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't
+        maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+        la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la La-la-la-la
+        (ah) La-la-la-la (ah) Sinta
+        Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin Labis
+        ang mga ningning Langit ay bumaba <span id="none">Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi
+            mo na kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din
+            'Di ko
+            alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog
+            ka
+            sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+            iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig
+            Ikaw
+            lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal
+            Malay ko
+            bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+            la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la
+            La-la-la-la
+            (ah) La-la-la-la (ah) Sinta
+            Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin
+            Labis
+            ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din
+            'Di ko
+            alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog
+            ka
+            sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+            iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig
+            Ikaw
+            lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal
+            Malay ko
+            bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+            la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la
+            La-la-la-la
+            (ah) La-la-la-la (ah) Sinta
+            Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin
+            Labis
+            ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din
+            'Di ko
+            alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog
+            ka
+            sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+            iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig
+            Ikaw
+            lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal
+            Malay ko
+            bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+            la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la
+            La-la-la-la
+            (ah) La-la-la-la (ah) Sinta
+            Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin
+            Labis
+            ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din
+            'Di ko
+            alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog
+            ka
+            sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+            iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig
+            Ikaw
+            lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal
+            Malay ko
+            bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+            la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la
+            La-la-la-la
+            (ah) La-la-la-la (ah) Sinta
+            Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin
+            Labis
+            ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din
+            'Di ko
+            alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog
+            ka
+            sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+            iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig
+            Ikaw
+            lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal
+            Malay ko
+            bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+            la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la
+            La-la-la-la
+            (ah) La-la-la-la (ah) Sinta
+            Oh, kay gandang pagmasdan Ang iyong mga mata Kumikinang-kinang 'Di ko maintindihan Ang iyong mga tingin
+            Labis
+            ang mga ningning Langit ay bumaba Bumababa pala ang tala Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin At sa iyong paglalambing Ako ay nahulog din
+            'Di ko
+            alam kung ano ang gagawin 'Di ko alam kung saan titingin Halik sa labi Tinginan natin 'Di akalaing Mahuhulog
+            ka
+            sa 'kin Tumingin ka sa aking mga mata At hindi mo na kailangan pang Magtanong nang paulit-ulit Ikaw lang ang
+            iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang puso't maniwala Na ikaw lang ang s'yang inibig
+            Ikaw
+            lang ang iibigin, sinta At sa paglisan ng araw, akala'y 'di ka mahal At ang nadarama'y hindi magtatagal
+            Malay ko
+            bang hindi magpapagal Iibigin kita kahit ga'no pa katagal Tumingin ka sa 'king mga mata At hindi mo na
+            kailangan
+            pang Magtanong nang paulit-ulit Ikaw lang ang iniibig At kung 'di kumbinsido'y magtiwala ka Hawakan ang
+            puso't
+            maniwala Na ikaw lang ang s'yang inibig Ikaw lang ang iibigin La-la-la-la-la-la, la-la-la La-la-la-la-la-la,
+            la-la-la La-la-la-la (ah) La-la-la-la (ah) La-la-la-la-la-la, la-la-la Siya lang, la-la, la-la-la
+            La-la-la-la
+            (ah) La-la-la-la (ah) Sinta</span>
+    </p>
+
+    <button id="play">Click Me</button>
+
+    <script>
+        var words = ["You’re so gorgeous.", "You’re my dream girl", "BESTFRIEND", "You are perfect", "you are everything", "I love you", "I want you", "Authentic", "GIRLFRIEND", "Wise", "Precious ", " Humble", "Stylish", "Creative", "Talented", "Understanding", "Compassionate", "Kind", "Hot", "Remarkable", "Glowing ", " Captivating", "Amazing", "Eager", "Incredible", "My apologies baby"];
+        var audio = new Audio("ikaw-lang.mp3");
+
+        window.addEventListener("load", function () {
+            var randoms = window.document.getElementsByClassName("randoms");
+            for (i = 0; i < randoms.length; i++)
+                changeWord(randoms[i]);
+        }, false);
+
+        function changeWord(a) {
+            a.style.opacity = '0.2';
+            a.innerHTML = words[getRandomInt(0, words.length - 1)];
+            setTimeout(function () {
+                a.style.opacity = '1';
+            }, 500);
+            setTimeout(function () {
+                changeWord(a);
+            }, getRandomInt(500, 800));
+        }
+
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function musicPlay() {
+            let play = document.getElementById("play")
+            !audio.paused ? audio.pause() : audio.play()
+        }
+        addEventListener("click", musicPlay);
+
+        // For vid
+        // const openVideoBtn = document.getElementById("openVideoBtn");
+        // const videoPopup = document.getElementById("videoPopup");
+        // const closeVideoBtn = document.getElementById("closeVideoBtn");
+
+        // openVideoBtn.addEventListener("click", function () {
+        //     videoPopup.style.display = "flex";
+        // });
+
+        // closeVideoBtn.addEventListener("click", function () {
+        //     videoPopup.style.display = "none";
+        //     videoPlayer.pause();
+        // });
+
+
+    </script>
+</body>
+
+</html>
